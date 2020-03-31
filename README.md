@@ -96,3 +96,9 @@ USE Demo2DB;
 ```sh
 SHOW tables;
 ```
+
+6. Show table fields:
+
+```sh
+DESCRIBE (YOUR_TABLE_NAME)
+```
