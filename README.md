@@ -1,6 +1,6 @@
 <h3>DATABASE</h3>
 
-<h4>Installation</h4>
+<b>Installation</b>
 1. Update local system:
 
 ```sh
@@ -26,7 +26,7 @@ sudo systemctl status mysql
 sudo mysql
 ```
 
-<h4>Grant new user access to MySQL</h4>
+<b>Grant new user access to MySQL</b>
 1. Change the authentication method from auth_socket to mysql_native_password:
 
 ```sh
@@ -39,6 +39,7 @@ FLUSH PRIVILEGES;
 ```sh
 GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'localhost' IDENTIFIED BY 'very_strong_password';
 ```
+<img src="images/auth_change_success.png" alt="Logo" width="919" height="209">
 
 3. Change password for new user. For older versions of MySQL,
 
@@ -53,4 +54,8 @@ FLUSH PRIVILEGS;
 ```
 where 'mynewpassword' is to be replaced with your new password.
 
-4. Make sure t
+4. Exit MySQL:
+
+```sh
+EXIT;
+```
