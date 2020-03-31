@@ -1,6 +1,8 @@
 <h3>DATABASE</h3>
 
+
 <b>Installation</b>
+
 1. Update local system:
 
 ```sh
@@ -25,8 +27,10 @@ sudo systemctl status mysql
 ```sh
 sudo mysql
 ```
+<br/>
 
 <b>Grant new user access to MySQL</b>
+
 1. Change the authentication method from auth_socket to mysql_native_password:
 
 ```sh
@@ -52,10 +56,43 @@ For new versions of MySQL,
 UPDATE mysql.user SET authentication_string=password('mynewpassword') WHERE User='appuser';
 FLUSH PRIVILEGS;
 ```
-where 'mynewpassword' is to be replaced with your new password.
+where 'mynewpassword' is to be replaced with your new password. In our case, mynewpassword is set be be 'password'.
 
 4. Exit MySQL:
 
 ```sh
 EXIT;
+```
+<br/>
+
+<b>Import .sql file to MySQL</b>
+
+1. Login MySQL with new password as password:
+
+```sh
+mysql -u appuser -p
+```
+
+2. Run the script with full path:
+
+```sh
+mysql> /home/knife/Desktop/Knife/UI_Portal/DB/Demo2DB.sql;
+```
+
+3. Show databases. Ensure Demo2DB is listed.
+
+```sh
+SHOW DATABASES;
+```
+
+4. Use database, Demo2DB:
+
+```sh
+USE Demo2DB;
+```
+
+5. Show all tables of database, Demo2DB:
+
+```sh
+SHOW tables;
 ```
