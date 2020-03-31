@@ -1,5 +1,6 @@
-<h4>DATABASE INSTALLATION</h4>
+<h4>DATABASE</h4>
 
+<h5>Installation</h5>
 1. Update local system:
 
 ```sh
@@ -17,6 +18,6 @@ sudo apt install mysql-server
 ```sh
 sudo systemctl status mysql
 ```
+<img src="images/sql_running.png" alt="Logo" width="730" height="248">
 
-
-
+4. 
