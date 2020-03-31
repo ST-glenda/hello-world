@@ -102,3 +102,38 @@ SHOW tables;
 ```sh
 DESCRIBE (YOUR_TABLE_NAME)
 ```
+<br/>
+
+<b>Export sql results to text file</b>
+
+1. Identify secure_file_priv location:
+
+```sh
+mysql> SELECT @@secure_file_priv;
+```
+
+2. Navigate to above location. Create temporary text file at path defined by secure_file_priv:
+
+```sh
+cat > test.txt
+```
+Press <kbd>ctrl</kbd> + <kbd>c</kbd> to end creation.
+
+3. Output the sql results to test.txt:
+
+```sh
+SELECT * INTO OUTFILE '/var/lib/mysql-files/test.txt' from YOUR_TABLE_NAME;
+```
+
+4. Enable permission to access mysql-files:
+
+```sh
+sudo -i
+```
+
+5. Move temporary file, test.txt to your own project location:
+
+```sh
+cd /var/lib/mysql/
+mv test.txt /home/knife/Desktop/Knife/UI_Portal/DB
+```
