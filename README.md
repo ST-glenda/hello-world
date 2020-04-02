@@ -76,7 +76,7 @@ mysql -u appuser -p
 2. Run the script with full path:
 
 ```sh
-mysql> /home/knife/Desktop/Knife/UI_Portal/DB/Demo2DB.sql;
+mysql> source /home/knife/Desktop/Knife/UI_Portal/DB/Demo2DB.sql;
 ```
 
 3. Show databases. Ensure Demo2DB is listed.
