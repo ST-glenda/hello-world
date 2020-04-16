@@ -9,7 +9,7 @@
 sudo apt update
 ```
 
-2. Install the MySQL package with the following command:
+2. InstallXXXXXXXXXXXX the MySQL package with the following command:
 
 ```sh
 sudo apt install mysql-server
